@@ -1,0 +1,15 @@
+# Sanal ortam ve büyük bağımlılıklar
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# CIFAR-10 ham indirme (GitHub 100MB limiti)
+**/data_download/
+**/*.tar.gz
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
