@@ -359,6 +359,43 @@ birleştirerek daha zengin bir temsil elde edilir.
 Bu grafik, projede ulaşılan en iyi k‑NN performansını özetleyen ana şekil olarak kullanılabilir.
 
 
+### 5.4. Genel karşılaştırmalı analiz
+
+Bu bölümde, tüm deneyleri doğrudan birbirleriyle kıyaslayarak özetliyoruz.  
+Sayısal değerler yukarıdaki tablolar ve grafiklerden (`../results/knn_results_*_accuracy.png`) alınmıştır.
+
+1. **Ham piksel ailesi (`raw`, `normalized`, `pca`)**
+   - `raw` → ≈ **%38** test doğruluğu.
+   - `normalized` → ≈ **%44.5** (sadece StandardScaler ile **+6 puan**).
+   - `pca` → ≈ **%46.2** (boyut 3072 → 99’a düşerken doğrulukta **ek +1.5–2 puan**).
+   - Yorum: Ham piksel uzayında ölçekleme ve PCA, k‑NN’in mesafe hesabını anlamlı hale getiriyor; fakat görsel yapıyı doğrudan modellemediği için üst sınır hâlâ görece düşük kalıyor.
+
+2. **HOG ailesi (`hog_no_scaler`, `hog_scaler`)**
+   - `hog_no_scaler` → ≈ **%49.6** (ham piksele göre **+11 puan**).
+   - `hog_scaler` → ≈ **%57.2** (sadece scaler eklenerek **+7.5 puan**).
+   - Yorum: Kenar tabanlı temsil ham piksellere göre çok daha bilgilendirici; ayrıca HOG vektörünün bileşenlerini StandardScaler ile aynı ölçeğe getirmek, k‑NN için kritik.
+
+3. **Gelişmiş HOG + renk + LBP ailesi (`hog_enh_*`)**
+   - `hog_enh_none_no_scaler` → ≈ **%52.9** (HOG’a göre **+3 puan**; renk ve doku bilgisi açık katkı sağlıyor).
+   - `hog_enh_equalize_scaler` → ≈ **%56.7** (eşitleme + scaler ile HOG+Scaler’a yakın bir performans).
+   - `hog_enh_none_scaler` / `hog_enh_norm_scaler` → ≈ **%60.0–60.3** (en iyi sonuçlar).
+   - Yorum:
+     - Renk histogramı, örneğin deniz/gökyüzü (ship, airplane) ve kara taşıtları (automobile, truck) arasındaki farkları yakalıyor.
+     - LBP, hayvan sınıfları (cat, dog, horse, frog) gibi doku açısından zor sınıfları ayırt etmede yardımcı oluyor.
+     - Gri seviye `norm` + StandardScaler kombinasyonu, hem HOG hem LBP histogramlarının ölçeğini dengeliyor; k‑NN’in kullandığı Öklid mesafesi bu sayede daha sağlıklı çalışıyor.
+
+4. **Genel sıralama ve kazanç**
+   - En kötü → en iyi:
+     - `raw` (**%38.15**)  
+     - `normalized` (**%44.52**)  
+     - `pca` (**%46.16**)  
+     - `hog_no_scaler` (**%49.59**)  
+     - `hog_enh_none_no_scaler` (**%52.89**)  
+     - `hog_enh_equalize_scaler` (**%56.65**)  
+     - `hog_scaler` (**%57.19**)  
+     - `hog_enh_none_scaler` / `hog_enh_norm_scaler` (**≈%60.0**)  
+   - Ham pikselden en iyi HOG+renk+LBP konfigürasyonuna geçerken yaklaşık **+22 puan** doğruluk kazanılmıştır.
+
 
 ## 6. k Değerinin Etkisi
 
