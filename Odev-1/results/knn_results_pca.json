@@ -1,0 +1,343 @@
+{
+  "feature_mode": "pca",
+  "pca_variance": 0.9,
+  "feature_dim": 99,
+  "k_values": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    25,
+    31
+  ],
+  "records": [
+    {
+      "k": 1,
+      "val_accuracy": 0.4136,
+      "test_accuracy": 0.4192,
+      "fit_time_sec": 0.01,
+      "val_pred_time_sec": 3.01,
+      "test_pred_time_sec": 5.92
+    },
+    {
+      "k": 3,
+      "val_accuracy": 0.4296,
+      "test_accuracy": 0.4393,
+      "fit_time_sec": 0.02,
+      "val_pred_time_sec": 2.49,
+      "test_pred_time_sec": 5.97
+    },
+    {
+      "k": 5,
+      "val_accuracy": 0.4568,
+      "test_accuracy": 0.4531,
+      "fit_time_sec": 0.01,
+      "val_pred_time_sec": 3.77,
+      "test_pred_time_sec": 8.54
+    },
+    {
+      "k": 7,
+      "val_accuracy": 0.4614,
+      "test_accuracy": 0.4577,
+      "fit_time_sec": 0.0,
+      "val_pred_time_sec": 3.19,
+      "test_pred_time_sec": 8.9
+    },
+    {
+      "k": 9,
+      "val_accuracy": 0.4628,
+      "test_accuracy": 0.4604,
+      "fit_time_sec": 0.0,
+      "val_pred_time_sec": 3.41,
+      "test_pred_time_sec": 8.96
+    },
+    {
+      "k": 11,
+      "val_accuracy": 0.4558,
+      "test_accuracy": 0.4613,
+      "fit_time_sec": 0.0,
+      "val_pred_time_sec": 3.8,
+      "test_pred_time_sec": 8.61
+    },
+    {
+      "k": 13,
+      "val_accuracy": 0.4564,
+      "test_accuracy": 0.4599,
+      "fit_time_sec": 0.0,
+      "val_pred_time_sec": 3.68,
+      "test_pred_time_sec": 9.04
+    },
+    {
+      "k": 15,
+      "val_accuracy": 0.4578,
+      "test_accuracy": 0.4616,
+      "fit_time_sec": 0.0,
+      "val_pred_time_sec": 3.73,
+      "test_pred_time_sec": 8.83
+    },
+    {
+      "k": 17,
+      "val_accuracy": 0.457,
+      "test_accuracy": 0.4597,
+      "fit_time_sec": 0.0,
+      "val_pred_time_sec": 3.33,
+      "test_pred_time_sec": 8.89
+    },
+    {
+      "k": 19,
+      "val_accuracy": 0.4554,
+      "test_accuracy": 0.4593,
+      "fit_time_sec": 0.01,
+      "val_pred_time_sec": 3.64,
+      "test_pred_time_sec": 9.04
+    },
+    {
+      "k": 21,
+      "val_accuracy": 0.4538,
+      "test_accuracy": 0.459,
+      "fit_time_sec": 0.0,
+      "val_pred_time_sec": 3.72,
+      "test_pred_time_sec": 8.76
+    },
+    {
+      "k": 25,
+      "val_accuracy": 0.4486,
+      "test_accuracy": 0.4552,
+      "fit_time_sec": 0.0,
+      "val_pred_time_sec": 3.62,
+      "test_pred_time_sec": 8.83
+    },
+    {
+      "k": 31,
+      "val_accuracy": 0.441,
+      "test_accuracy": 0.4531,
+      "fit_time_sec": 0.0,
+      "val_pred_time_sec": 3.58,
+      "test_pred_time_sec": 8.47
+    }
+  ],
+  "best_k": 9,
+  "class_names": [
+    "airplane",
+    "automobile",
+    "bird",
+    "cat",
+    "deer",
+    "dog",
+    "frog",
+    "horse",
+    "ship",
+    "truck"
+  ],
+  "confusion_matrix": [
+    [
+      594,
+      26,
+      45,
+      19,
+      34,
+      14,
+      35,
+      12,
+      187,
+      34
+    ],
+    [
+      46,
+      472,
+      25,
+      38,
+      54,
+      30,
+      54,
+      23,
+      144,
+      114
+    ],
+    [
+      127,
+      20,
+      323,
+      109,
+      155,
+      64,
+      114,
+      28,
+      44,
+      16
+    ],
+    [
+      53,
+      25,
+      62,
+      309,
+      98,
+      174,
+      158,
+      38,
+      46,
+      37
+    ],
+    [
+      67,
+      9,
+      126,
+      70,
+      446,
+      47,
+      125,
+      45,
+      47,
+      18
+    ],
+    [
+      39,
+      14,
+      85,
+      159,
+      93,
+      364,
+      117,
+      51,
+      58,
+      20
+    ],
+    [
+      20,
+      27,
+      67,
+      88,
+      129,
+      58,
+      554,
+      16,
+      18,
+      23
+    ],
+    [
+      52,
+      23,
+      63,
+      80,
+      127,
+      73,
+      65,
+      410,
+      43,
+      64
+    ],
+    [
+      110,
+      49,
+      8,
+      27,
+      37,
+      23,
+      16,
+      11,
+      678,
+      41
+    ],
+    [
+      66,
+      150,
+      14,
+      52,
+      22,
+      24,
+      43,
+      35,
+      140,
+      454
+    ]
+  ],
+  "classification_report": {
+    "airplane": {
+      "precision": 0.5059625212947189,
+      "recall": 0.594,
+      "f1-score": 0.546458141674333,
+      "support": 1000.0
+    },
+    "automobile": {
+      "precision": 0.5791411042944785,
+      "recall": 0.472,
+      "f1-score": 0.5201101928374655,
+      "support": 1000.0
+    },
+    "bird": {
+      "precision": 0.39486552567237165,
+      "recall": 0.323,
+      "f1-score": 0.35533553355335534,
+      "support": 1000.0
+    },
+    "cat": {
+      "precision": 0.3249211356466877,
+      "recall": 0.309,
+      "f1-score": 0.3167606355715018,
+      "support": 1000.0
+    },
+    "deer": {
+      "precision": 0.3732217573221757,
+      "recall": 0.446,
+      "f1-score": 0.40637813211845103,
+      "support": 1000.0
+    },
+    "dog": {
+      "precision": 0.417910447761194,
+      "recall": 0.364,
+      "f1-score": 0.3890967397113843,
+      "support": 1000.0
+    },
+    "frog": {
+      "precision": 0.43247462919594065,
+      "recall": 0.554,
+      "f1-score": 0.4857518632178869,
+      "support": 1000.0
+    },
+    "horse": {
+      "precision": 0.6128550074738416,
+      "recall": 0.41,
+      "f1-score": 0.49131216297183944,
+      "support": 1000.0
+    },
+    "ship": {
+      "precision": 0.4825622775800712,
+      "recall": 0.678,
+      "f1-score": 0.5638253638253639,
+      "support": 1000.0
+    },
+    "truck": {
+      "precision": 0.5529841656516443,
+      "recall": 0.454,
+      "f1-score": 0.4986271279516749,
+      "support": 1000.0
+    },
+    "accuracy": 0.4604,
+    "macro avg": {
+      "precision": 0.46768985718931244,
+      "recall": 0.46040000000000003,
+      "f1-score": 0.4573655893433256,
+      "support": 10000.0
+    },
+    "weighted avg": {
+      "precision": 0.46768985718931244,
+      "recall": 0.4604,
+      "f1-score": 0.4573655893433256,
+      "support": 10000.0
+    }
+  },
+  "train_samples": 45000,
+  "val_samples": 5000,
+  "test_samples": 10000,
+  "hog_preprocess": null,
+  "hog_add_color": null,
+  "hog_add_lbp": null,
+  "hog_use_scaler": null
+}

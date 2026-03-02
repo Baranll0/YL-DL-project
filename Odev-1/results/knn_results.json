@@ -1,0 +1,339 @@
+{
+  "feature_mode": "hog_enhanced",
+  "pca_variance": null,
+  "feature_dim": 358,
+  "k_values": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    25,
+    31
+  ],
+  "records": [
+    {
+      "k": 1,
+      "val_accuracy": 0.53,
+      "test_accuracy": 0.5323,
+      "fit_time_sec": 0.01,
+      "val_pred_time_sec": 6.19,
+      "test_pred_time_sec": 11.66
+    },
+    {
+      "k": 3,
+      "val_accuracy": 0.5594,
+      "test_accuracy": 0.558,
+      "fit_time_sec": 0.04,
+      "val_pred_time_sec": 3.17,
+      "test_pred_time_sec": 7.62
+    },
+    {
+      "k": 5,
+      "val_accuracy": 0.581,
+      "test_accuracy": 0.5827,
+      "fit_time_sec": 0.02,
+      "val_pred_time_sec": 4.3,
+      "test_pred_time_sec": 10.43
+    },
+    {
+      "k": 7,
+      "val_accuracy": 0.5916,
+      "test_accuracy": 0.5933,
+      "fit_time_sec": 0.05,
+      "val_pred_time_sec": 5.0,
+      "test_pred_time_sec": 11.9
+    },
+    {
+      "k": 9,
+      "val_accuracy": 0.596,
+      "test_accuracy": 0.5947,
+      "fit_time_sec": 0.01,
+      "val_pred_time_sec": 4.54,
+      "test_pred_time_sec": 9.26
+    },
+    {
+      "k": 11,
+      "val_accuracy": 0.599,
+      "test_accuracy": 0.5985,
+      "fit_time_sec": 0.0,
+      "val_pred_time_sec": 5.26,
+      "test_pred_time_sec": 10.69
+    },
+    {
+      "k": 13,
+      "val_accuracy": 0.6002,
+      "test_accuracy": 0.5982,
+      "fit_time_sec": 0.01,
+      "val_pred_time_sec": 4.69,
+      "test_pred_time_sec": 9.74
+    },
+    {
+      "k": 15,
+      "val_accuracy": 0.6022,
+      "test_accuracy": 0.6,
+      "fit_time_sec": 0.02,
+      "val_pred_time_sec": 4.17,
+      "test_pred_time_sec": 11.34
+    },
+    {
+      "k": 17,
+      "val_accuracy": 0.605,
+      "test_accuracy": 0.6003,
+      "fit_time_sec": 0.04,
+      "val_pred_time_sec": 4.43,
+      "test_pred_time_sec": 9.26
+    },
+    {
+      "k": 19,
+      "val_accuracy": 0.5984,
+      "test_accuracy": 0.601,
+      "fit_time_sec": 0.0,
+      "val_pred_time_sec": 4.9,
+      "test_pred_time_sec": 9.74
+    },
+    {
+      "k": 21,
+      "val_accuracy": 0.5982,
+      "test_accuracy": 0.6028,
+      "fit_time_sec": 0.03,
+      "val_pred_time_sec": 4.34,
+      "test_pred_time_sec": 9.63
+    },
+    {
+      "k": 25,
+      "val_accuracy": 0.6026,
+      "test_accuracy": 0.601,
+      "fit_time_sec": 0.02,
+      "val_pred_time_sec": 4.4,
+      "test_pred_time_sec": 9.84
+    },
+    {
+      "k": 31,
+      "val_accuracy": 0.595,
+      "test_accuracy": 0.5967,
+      "fit_time_sec": 0.0,
+      "val_pred_time_sec": 4.77,
+      "test_pred_time_sec": 10.78
+    }
+  ],
+  "best_k": 17,
+  "class_names": [
+    "airplane",
+    "automobile",
+    "bird",
+    "cat",
+    "deer",
+    "dog",
+    "frog",
+    "horse",
+    "ship",
+    "truck"
+  ],
+  "confusion_matrix": [
+    [
+      686,
+      18,
+      66,
+      10,
+      19,
+      9,
+      10,
+      5,
+      172,
+      5
+    ],
+    [
+      29,
+      790,
+      9,
+      6,
+      8,
+      3,
+      24,
+      6,
+      102,
+      23
+    ],
+    [
+      80,
+      24,
+      510,
+      60,
+      72,
+      75,
+      101,
+      26,
+      47,
+      5
+    ],
+    [
+      41,
+      52,
+      105,
+      296,
+      78,
+      204,
+      114,
+      51,
+      41,
+      18
+    ],
+    [
+      57,
+      24,
+      95,
+      52,
+      445,
+      36,
+      175,
+      67,
+      36,
+      13
+    ],
+    [
+      21,
+      12,
+      85,
+      116,
+      60,
+      533,
+      70,
+      63,
+      26,
+      14
+    ],
+    [
+      22,
+      31,
+      45,
+      26,
+      33,
+      38,
+      751,
+      20,
+      32,
+      2
+    ],
+    [
+      19,
+      20,
+      48,
+      49,
+      59,
+      78,
+      35,
+      657,
+      22,
+      13
+    ],
+    [
+      91,
+      63,
+      13,
+      9,
+      7,
+      6,
+      8,
+      8,
+      770,
+      25
+    ],
+    [
+      49,
+      146,
+      20,
+      21,
+      21,
+      20,
+      22,
+      22,
+      114,
+      565
+    ]
+  ],
+  "classification_report": {
+    "airplane": {
+      "precision": 0.6264840182648402,
+      "recall": 0.686,
+      "f1-score": 0.6548926014319809,
+      "support": 1000.0
+    },
+    "automobile": {
+      "precision": 0.6694915254237288,
+      "recall": 0.79,
+      "f1-score": 0.7247706422018348,
+      "support": 1000.0
+    },
+    "bird": {
+      "precision": 0.5120481927710844,
+      "recall": 0.51,
+      "f1-score": 0.5110220440881763,
+      "support": 1000.0
+    },
+    "cat": {
+      "precision": 0.45891472868217054,
+      "recall": 0.296,
+      "f1-score": 0.35987841945288757,
+      "support": 1000.0
+    },
+    "deer": {
+      "precision": 0.5548628428927681,
+      "recall": 0.445,
+      "f1-score": 0.4938956714761376,
+      "support": 1000.0
+    },
+    "dog": {
+      "precision": 0.5319361277445109,
+      "recall": 0.533,
+      "f1-score": 0.5324675324675324,
+      "support": 1000.0
+    },
+    "frog": {
+      "precision": 0.5732824427480916,
+      "recall": 0.751,
+      "f1-score": 0.6502164502164502,
+      "support": 1000.0
+    },
+    "horse": {
+      "precision": 0.7102702702702702,
+      "recall": 0.657,
+      "f1-score": 0.6825974025974026,
+      "support": 1000.0
+    },
+    "ship": {
+      "precision": 0.5653450807635829,
+      "recall": 0.77,
+      "f1-score": 0.6519898391193903,
+      "support": 1000.0
+    },
+    "truck": {
+      "precision": 0.8272327964860908,
+      "recall": 0.565,
+      "f1-score": 0.6714200831847891,
+      "support": 1000.0
+    },
+    "accuracy": 0.6003,
+    "macro avg": {
+      "precision": 0.6029868026047139,
+      "recall": 0.6003000000000001,
+      "f1-score": 0.5933150686236581,
+      "support": 10000.0
+    },
+    "weighted avg": {
+      "precision": 0.6029868026047138,
+      "recall": 0.6003,
+      "f1-score": 0.5933150686236582,
+      "support": 10000.0
+    }
+  },
+  "train_samples": 45000,
+  "val_samples": 5000,
+  "test_samples": 10000
+}
